@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+}
+#container {
+    margin: 10px;
+    width: 800px;
+    height: 500px;
+    border: 1px solid black;
+}
+
+.box {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background-color: green;
+    border: 1px solid black;
+}
+
+.selected {
+    border: 2px solid red;
+}
+
+#selectFrame {
+    width: 0;
+    height: 0;
+    background-color: #6582c9;
+    position: absolute;
+    z-index: 100;
+    visibility: visible;
+    opacity: 0.4;
+}
