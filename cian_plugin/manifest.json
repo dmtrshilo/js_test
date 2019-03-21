@@ -1,0 +1,41 @@
+{
+    "manifest_version": 2,
+
+    "name": "CIAN helper",
+    "description": "This plugin can help looking best rent in your time",
+    "version": "1.0",
+
+    "background": {
+        "scripts": ["script/background.js"],
+        "persistent": false
+    },
+    "page_action": {
+        "default_icon": {
+            "16": "image/icon.png",
+            "32": "image/icon.png",
+            "48": "image/icon.png",
+            "128": "image/icon.png"
+        },
+        "default_popup": "popup.html"
+    },
+    "icons": {
+        "16": "image/icon.png",
+        "32": "image/icon.png",
+        "48": "image/icon.png",
+        "128": "image/icon.png"
+    },
+    "permissions": [
+        "storage",
+        "declarativeContent",
+        "activeTab"
+    ],
+
+    "content_scripts": [
+        {
+            "matches": ["*://*.cian.ru/*"],
+            "run_at": "document_idle",
+            "all_frames": true,
+            "js": ["script/contentScript.js"]
+        }
+    ]
+}
